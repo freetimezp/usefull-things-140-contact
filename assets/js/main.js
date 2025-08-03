@@ -53,6 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     toggleButton.addEventListener("click", function () {
+        gsap.to(".header-text h1 span", {
+            top: 500,
+            duration: 1,
+            ease: "power4.out",
+            stagger: 0.075,
+            delay: 2,
+        });
+        
         if (isOpen) {
             tl.reverse();
         } else {
@@ -62,6 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     toggleButton2.addEventListener("click", function () {
+        gsap.to(".header-text h1 span", {
+            top: 0,
+            duration: 1,
+            ease: "power4.out",
+            stagger: 0.075,
+            delay: 2,
+        });
+        
         if (isOpen) {
             tl.reverse();
         } else {
