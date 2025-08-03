@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -10,25 +12,31 @@ a {
     text-decoration: none;
 }
 
-html, body {
+html,
+body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    overflow: hidden;
     background: #eae9e4;
+    background: url(../images/bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
 }
 
 button {
     background: none;
     outline: none;
+    background: #000;
     border: 1px solid #000;
     text-transform: uppercase;
-    padding: 0.5em 1em;
+    padding: 1em;
     border-radius: 2em;
+    color: #fff;
     cursor: pointer;
 }
 
 button#toggle {
-    background: #000;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
 }
 
 button:hover {
@@ -46,6 +54,12 @@ button:hover {
     font-size: 15px;
     padding: 1.5em 0;
     text-align: center;
+}
+
+.nav p {
+    padding: 1em 2em 5em 2em;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), transparent);
+    border-radius: 15px 15px 0 0;
 }
 
 .tagline {
@@ -69,7 +83,7 @@ button:hover {
 }
 
 .header-text h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Pinyon Script";
     font-size: 10vw;
     font-weight: lighter;
 }
@@ -85,10 +99,23 @@ button:hover {
     width: 100vw;
     height: 100vh;
     background: #262625;
+    background: url(../images/overlay.jpg) 50% 50% no-repeat;
+    background-size: cover;
     display: flex;
     padding: 1em;
     pointer-events: none;
     opacity: 0;
+}
+
+.overlay::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
 }
 
 .col:nth-child(1) {
@@ -137,10 +164,10 @@ button:hover {
 }
 
 .send h1 {
-    color: #eae9e4;
-    text-transform: uppercase;
+    color: #b7b7b3;
     font-weight: lighter;
-    font-size: 300px;
+    text-transform: uppercase;
+    font-size: 150px;
 }
 
 .form label {
@@ -222,30 +249,3 @@ input[type="text"] {
         font-size: 100px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
